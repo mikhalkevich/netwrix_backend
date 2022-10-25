@@ -4,11 +4,12 @@
 Это бэкенд API для тестового задания.
 
 ## Установка
-- git clone https://github.com/mikhalkevich/netwrix_backend
-- cd netwrix_backend
-- composer install
-Далее необходимо по примеру .env.example создать файл .env, и в нём прописать переменные подключения базы данных. 
+- <code>git clone https://github.com/mikhalkevich/netwrix_backend</code>
+- <code>cd netwrix_backend</code>
+- <code>composer install</code>
+- Далее необходимо по примеру .env.example создать файл .env, и в нём прописать переменные подключения базы данных. 
 Дамп базы находится в файле netwrix.sql
+- <code>php artisan serve</code>
 
 ## Пояснения для фронтенда
 - <code>get {{url}}/api/partner/all </code> - вывод всех компаний
