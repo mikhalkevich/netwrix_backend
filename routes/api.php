@@ -16,6 +16,7 @@ use App\Http\Controllers;
 */
 Route::get('partner/all', [Controllers\PartnerController::class, 'getAll']);
 Route::get('countries', [Controllers\CountryController::class, 'getAll']);
+Route::get('types', [Controllers\TypeController::class, 'getTypes']);
 Route::get('states/{country_id}', [Controllers\StateController::class, 'getStates']);
 Route::middleware('auth:sanctum')->group(function(){
     Route::post('logout',[Controllers\AuthController::class, 'logout']);
