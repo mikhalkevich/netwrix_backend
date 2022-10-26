@@ -3,6 +3,9 @@
 namespace App\ModelFilters;
 
 use EloquentFilter\ModelFilter;
+use App\Models\Type;
+use App\Models\Country;
+use App\Models\State;
 
 class PartnerFilter extends ModelFilter
 {
@@ -21,10 +24,16 @@ class PartnerFilter extends ModelFilter
     public function address($world){
         return $this->where('address', 'LIKE', '%'.$world.'%');
     }
-    public function country($world){
-        return $this->where('countries_covered', 'LIKE', '%'.$world.'%');
+    public function type($id){
+        $type = Type::find($id);
+        return $this->where('status', $type->name);
     }
-    public function state($world){
-        return $this->where('states_covered', 'LIKE', '%'.$world.'%');
+    public function country($id){
+        $country = Country::find($id);
+        return $this->where('countries_covered', 'LIKE', '%'.$country->short_name.'%');
+    }
+    public function state($id){
+        $state = State::find($id);
+        return $this->where('states_covered', 'LIKE', '%'.$state->short_name.'%');
     }
 }

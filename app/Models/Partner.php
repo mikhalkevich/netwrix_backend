@@ -15,7 +15,7 @@ class Partner extends Model
 
     public $fillable = ['company', 'logo', 'status', 'address', 'phone', 'website', 'countries_covered', 'states_covered'];
 
-    protected $appends = ['full_name'];
+    protected $appends = ['full_name', 'countries'];
 
 
 

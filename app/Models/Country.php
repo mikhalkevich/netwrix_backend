@@ -9,4 +9,5 @@ class Country extends Model
 {
     use HasFactory;
     public $table = 'loc_country';
+    protected $primaryKey = 'country_id';
 }

@@ -9,4 +9,5 @@ class State extends Model
 {
     use HasFactory;
     public $table = 'loc_state';
+    protected $primaryKey = 'state_id';
 }
