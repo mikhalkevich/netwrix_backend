@@ -30,7 +30,9 @@ class PartnerFilter extends ModelFilter
     }
     public function country($id){
         $country = Country::find($id);
-        return $this->where('countries_covered', 'LIKE', '%'.$country->short_name.'%');
+        if($country){
+            return $this->where('countries_covered', 'LIKE', '%'.$country->short_name.'%');
+        }
     }
     public function state($id){
         $state = State::find($id);
